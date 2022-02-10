@@ -11,9 +11,56 @@ header {
 }
 main {
     background-color: thistle;
+    padding: 10px;
 }
 
 form {
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
     background-color: blueviolet;
     padding: 20px;
+    height: 40vh;
+    font-weight: 600;
+    
+}
+
+form button {
+    margin: 10px;
+    width: 15%;
+    height: 30px;
+    background-color: linear-gradient(to-right,45deg,rgb(180, 23, 180),rgb(178,45,78) 70%);
+    color: white;
+}
+
+.editar, .eliminar {
+    margin: 5px;
+    height: 30px;
+    width: 10%;
+}
+
+form input {
+    width: 50%;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    width: 50%;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    padding: 10px;
+}
+
+.itemcomentario {
+    display: flex;
+    
+}
+
+footer {
+    font-size: x-small;
 }

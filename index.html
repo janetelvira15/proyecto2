@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Proyecto 2, CRUD</h1>
+        <h2>Janet Elvira Santos</h2>
+    </header>
+    <main><h3>Mi proyecto consiste en una pregunta que se puede comentar, así como también se pueden editar o eliminar comentarios</h3>
+        <h4>Comenta la experiencia que has tenido con la educación en línea</h4>
+        <form>
+            <label for="autor">Autor del comentario</label>
+            <input type="text" name="autor" id="autor">
+            <label for="comentario">Introduce tu comenatrio</label>
+            <textarea name="comentario" id="comentario"></textarea>
+            <button id="procesaform" type="button" onclick="agregacomentario()">Agregar</button>
+        </form>
+        <section id="listacoment"></section>
+    </main>
+    <footer>
+
+    </footer>
+  <script src="./comentario.js"></script>
+</body>
+</html>

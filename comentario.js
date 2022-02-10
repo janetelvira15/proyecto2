@@ -4,9 +4,9 @@ if(window.localStorage.length > 0) {
     const items = {...localStorage}
     for (const clave in items) {
         console.log(window.localStorage.length)
-        tabla.innerHTML += `<div class="itemcomentario" id="${clave}"><p>${clave}</p><br><p>${items[clave]}</p>
+        tabla.innerHTML += `<div class="itemcomentario" id="${clave}"><div><p>${clave}</p><br><p>${items[clave]}</p></div><div>
         <button type="button" class="eliminar" onclick='borracomentario("${clave}")'>Eliminar</button>
-        <button type="button" class="editar" onclick='editacomentario("${clave}","${items[clave]}")'>Editar</button></div>` 
+        <button type="button" class="editar" onclick='editacomentario("${clave}","${items[clave]}")'>Editar</button></div></div><hr>` 
     
     }
 }
@@ -18,9 +18,9 @@ function agregacomentario() {
     let comentario = document.querySelector("#comentario").value 
 
     window.localStorage.setItem(autor,comentario)
-    document.querySelector("#listacoment").innerHTML+= `<div class="itemcomentario" id="${autor}"><p>${autor}<br></p><p>${comentario}</p>
+    document.querySelector("#listacoment").innerHTML+= `<div class="itemcomentario" id="${autor}"><div><p>${autor}<br></p><p>${comentario}</p></div><div>
                                                         <button type="button" class="eliminar" onclick='borracomentario("${autor}")'>Eliminar</button>
-                                                        <button type="button" class="editar" onclick='editacomentario("${autor}","${comentario}")'>Editar</button></div>`
+                                                        <button type="button" class="editar" onclick='editacomentario("${autor}","${comentario}")'>Editar</button></div></div><hr>`
 
     document.querySelector("#autor").value = ""
     document.querySelector("#comentario").value =""
@@ -50,9 +50,9 @@ function editacomentario(autor,comentario) {
         let autor = document.querySelector("#autor").value
         let comentario = document.querySelector("#comentario").value
         window.localStorage.setItem(autor,comentario)
-        divselec.innerHTML = `<div class="itemcomentario" id="${autor}"><p>${autor}</p><br><p>${comentario}</p>
+        divselec.innerHTML = `<div class="itemcomentario" id="${autor}"><div><p>${autor}</p><p>${comentario}</p></div><div>
         <button type="button" class="eliminar" onclick='borracomentario("${autor}")'>Eliminar</button>
-        <button type="button" class="editar" onclick='editacomentario("${autor}","${comentario}")'>Editar</button></div>`
+        <button type="button" class="editar" onclick='editacomentario("${autor}","${comentario}")'>Editar</button></div></div><hr>`
         document.querySelector("#autor").value = ""
         document.querySelector("#comentario").value =""
         let boton = document.querySelector("#procesaform")
